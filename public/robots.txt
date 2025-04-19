@@ -1,0 +1,6 @@
+# robots.txt for Dog House Rwanda
+
+User-agent: *
+Allow: /
+
+Sitemap: https://doghouserwanda.com/sitemap.xml
