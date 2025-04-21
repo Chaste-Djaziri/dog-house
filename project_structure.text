@@ -1,0 +1,126 @@
+- .gitignore
+- app
+  - about
+    - page.tsx
+  - contact
+    - loading.tsx
+    - page.tsx
+  - dogs
+    - page.tsx
+  - globals.css
+  - layout.tsx
+  - page.tsx
+- components
+  - footer.tsx
+  - header.tsx
+  - instagram-feed.tsx
+  - theme-provider.tsx
+  - ui
+    - accordion.tsx
+    - alert-dialog.tsx
+    - alert.tsx
+    - aspect-ratio.tsx
+    - avatar.tsx
+    - badge.tsx
+    - breadcrumb.tsx
+    - button.tsx
+    - calendar.tsx
+    - card.tsx
+    - carousel.tsx
+    - chart.tsx
+    - checkbox.tsx
+    - collapsible.tsx
+    - command.tsx
+    - context-menu.tsx
+    - dialog.tsx
+    - drawer.tsx
+    - dropdown-menu.tsx
+    - form.tsx
+    - hover-card.tsx
+    - input-otp.tsx
+    - input.tsx
+    - label.tsx
+    - menubar.tsx
+    - navigation-menu.tsx
+    - pagination.tsx
+    - popover.tsx
+    - progress.tsx
+    - radio-group.tsx
+    - resizable.tsx
+    - scroll-area.tsx
+    - select.tsx
+    - separator.tsx
+    - sheet.tsx
+    - sidebar.tsx
+    - skeleton.tsx
+    - slider.tsx
+    - sonner.tsx
+    - switch.tsx
+    - table.tsx
+    - tabs.tsx
+    - textarea.tsx
+    - toast.tsx
+    - toaster.tsx
+    - toggle-group.tsx
+    - toggle.tsx
+    - tooltip.tsx
+    - use-mobile.tsx
+    - use-toast.ts
+- components.json
+- hooks
+  - use-mobile.tsx
+  - use-toast.ts
+- lib
+  - utils.ts
+- next-env.d.ts
+- next.config.mjs
+- package-lock.json
+- package.json
+- pnpm-lock.yaml
+- postcss.config.mjs
+- public
+  - images
+    - dog1.png
+    - dog2.png
+    - dog3.png
+    - dog4.png
+    - dog5.png
+    - dog6.png
+    - hero.jpg
+    - hero1.jpg
+    - hero10.jpg
+    - hero11.jpg
+    - hero12.jpg
+    - hero13.jpg
+    - hero14.jpg
+    - hero15.jpg
+    - hero16.jpg
+    - hero17.jpg
+    - hero18.jpg
+    - hero19.jpg
+    - hero2.jpg
+    - hero20.jpg
+    - hero21.jpg
+    - hero22.jpg
+    - hero23.jpg
+    - hero24.jpg
+    - hero25.jpg
+    - hero3.jpg
+    - hero4.jpg
+    - hero5.jpg
+    - hero6.jpg
+    - hero7.jpg
+    - hero8.jpg
+    - hero9.jpg
+    - tray.jpg
+  - placeholder-logo.png
+  - placeholder-logo.svg
+  - placeholder-user.jpg
+  - placeholder.jpg
+  - placeholder.svg
+  - robots.txt
+  - sitemap.xml
+- styles
+  - globals.css
+- tailwind.config.ts
+- tsconfig.json
