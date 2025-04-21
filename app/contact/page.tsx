@@ -73,9 +73,6 @@ export default function ContactPage() {
                   name="email"
                   type="email"
                   value={formData.email}
-                  onChange
-                  type="email"
-                  value={formData.email}
                   onChange={handleChange}
                   required
                 />
