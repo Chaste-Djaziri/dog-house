@@ -1,73 +1,29 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import Image from "next/image"
-import { Card, CardContent } from "@/components/ui/card"
-import { Skeleton } from "@/components/ui/skeleton"
+import Script from "next/script"
 
-interface InstagramPost {
-  id: string
-  imageUrl: string
-  caption: string
-  likes: number
-  timestamp: string
-}
-
-// This is a mock function since we can't actually fetch Instagram data without authentication
-const mockInstagramPosts = [
+const posts = [
+  "https://www.instagram.com/reel/DORFf-tDBRc/",
+  "https://www.instagram.com/reel/DOMJQjyDDGG/",
+  "https://www.instagram.com/reel/DOJxc-tDCZ8/",
+  "https://www.instagram.com/p/DN94wRHDCOq/",
+  "https://www.instagram.com/p/DNMCqDMsMcZ/",
+  "https://www.instagram.com/p/DJYuzNsNqfL/",
 ]
 
-export default function InstagramFeed({ username }: { username: string }) {
-  const [posts, setPosts] = useState<InstagramPost[]>([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    // Simulate API fetch delay
-    const timer = setTimeout(() => {
-      setPosts(mockInstagramPosts)
-      setLoading(false)
-    }, 1500)
-
-    return () => clearTimeout(timer)
-  }, [])
-
+export default function InstagramFeed() {
   return (
-    <div>
-      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-        {loading
-          ? // Loading skeletons
-            Array(5)
-              .fill(0)
-              .map((_, index) => (
-                <Card key={index} className="overflow-hidden">
-                  <Skeleton className="aspect-square w-full" />
-                  <CardContent className="p-4">
-                    <Skeleton className="mb-2 h-4 w-3/4" />
-                    <Skeleton className="h-4 w-1/2" />
-                  </CardContent>
-                </Card>
-              ))
-          : // Actual posts
-            posts.map((post) => (
-              <Card key={post.id} className="overflow-hidden transition-all duration-300 hover:shadow-lg">
-                <div className="relative aspect-square">
-                  <Image
-                    src={post.imageUrl || "/placeholder.svg"}
-                    alt={post.caption}
-                    fill
-                    className="object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
-                <CardContent className="p-4">
-                  <p className="line-clamp-2 text-sm text-muted-foreground">{post.caption}</p>
-                  <div className="mt-2 flex items-center justify-between text-xs text-muted-foreground">
-                    <span>{post.likes} likes</span>
-                    <span>{post.timestamp}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-      </div>
+    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {posts.map((url, i) => (
+        <blockquote
+          key={i}
+          className="instagram-media"
+          data-instgrm-captioned
+          data-instgrm-permalink={`${url}?utm_source=ig_embed&utm_campaign=loading`}
+          data-instgrm-version="14"
+        ></blockquote>
+      ))}
+      <Script src="//www.instagram.com/embed.js" strategy="lazyOnload" />
     </div>
   )
 }

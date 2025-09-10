@@ -3,7 +3,7 @@ import { Instagram, Phone, Mail, MapPin } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-amber-50 pt-12">
+    <footer className="bg-gray-900 pt-12">
       <div className="container mx-auto px-4">
         <div className="grid gap-8 pb-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
@@ -96,7 +96,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 py-6 text-center text-sm text-muted-foreground">
+        <div className="border-t border-gray-800 py-6 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Dog House Rwanda. All rights reserved.</p>
           <p className="mt-2">
             Website designed and developed by{" "}

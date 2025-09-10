@@ -64,7 +64,7 @@ export default function AboutPage() {
 
       <div className="mb-16">
         <h2 className="mb-8 text-center text-3xl font-semibold">Meet The Owner</h2>
-        <div className="mx-auto max-w-3xl rounded-xl bg-amber-50 p-8">
+        <div className="mx-auto max-w-3xl rounded-xl bg-neutral-900 p-8" data-aos="fade-up">
           <div className="flex flex-col items-center gap-8 md:flex-row">
             <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-amber-600">
               <Image src="/images/tray.jpg" alt="Tray McCall" fill className="object-cover" />
@@ -113,7 +113,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-          <div className="h-[400px] overflow-hidden rounded-xl bg-gray-200">
+          <div className="h-[400px] overflow-hidden rounded-xl bg-neutral-800">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d282.9691236672883!2d29.958487673817395!3d-1.941381402627953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2srw!4v1744830556866!5m2!1sen!2srw"
               width="100%"

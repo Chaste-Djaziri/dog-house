@@ -7,18 +7,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Instagram, Phone } from "lucide-react"
 import InstagramFeed from "@/components/instagram-feed"
-import { useEffect } from "react"
-import AOS from "aos"
-import "aos/dist/aos.css"
-
 export default function Home() {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: false,
-    })
-  }, [])
-
   return (
     <div className="flex flex-col gap-16 pb-16">
       {/* Hero Section */}
@@ -101,7 +90,11 @@ export default function Home() {
             { img: "/images/hero5.jpg", name: "Bella", breed: "GermanShapherd" },
             { img: "/images/hero8.jpg", name: "Charlie", breed: "Maltes" },
           ].map((dog, index) => (
-            <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <Card
+              key={index}
+              className="overflow-hidden transition-all duration-300 hover:shadow-lg"
+              data-aos="zoom-in"
+            >
               <div className="relative h-64 w-full">
                 <Image
                   src={dog.img || "/placeholder.svg"}
@@ -128,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="bg-amber-50 py-16" data-aos="fade-up">
+      <section className="bg-neutral-900 py-16" data-aos="fade-up">
         <div className="container mx-auto px-4">
           <h2 className="mb-2 text-center text-3xl font-bold tracking-tight sm:text-4xl">Our Services</h2>
           <p className="mx-auto mb-12 max-w-2xl text-center text-muted-foreground">
