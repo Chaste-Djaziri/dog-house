@@ -12,14 +12,7 @@ export const metadata: Metadata = {
 }
 
 const dogs = [
-  {
-    id: 1,
-    name: "Max",
-    breed: "Maltese",
-    age: "1 month",
-    image: "/images/hero.jpg",
-    category: "adult",
-  },
+  { id: 1, name: "Max", breed: "Maltese", age: "1 month", image: "/images/hero.jpg", category: "adult" },
   {
     id: 2,
     name: "Bella",
@@ -29,23 +22,8 @@ const dogs = [
     image: "/images/hero3.jpg",
     category: "adult",
   },
-  {
-    id: 3,
-    name: "Charlie",
-    breed: "Maltese",
-    age: "2 months",
-    image: "/images/hero2.jpg",
-    category: "adult",
-  },
-  // Removed dog5 from the list
-  {
-    id: 5,
-    name: "Puppies",
-    breed: "BoarBoel",
-    age: "2 months",
-    image: "/images/hero4.jpg",
-    category: "adult",
-  },
+  { id: 3, name: "Charlie", breed: "Maltese", age: "2 months", image: "/images/hero2.jpg", category: "adult" },
+  { id: 5, name: "Luna", breed: "BoarBoel", age: "2 months", image: "/images/hero4.jpg", category: "adult" },
   {
     id: 6,
     name: "Daisy",
@@ -57,7 +35,7 @@ const dogs = [
   },
   {
     id: 7,
-    name: "Kat",
+    name: "Cooper",
     breed: "American Bully",
     age: "1 years",
     gender: "Female",
@@ -66,7 +44,7 @@ const dogs = [
   },
   {
     id: 8,
-    name: "Bob",
+    name: "Oscar",
     breed: "Maltese",
     age: "1 years",
     gender: "Male",
@@ -75,7 +53,7 @@ const dogs = [
   },
   {
     id: 9,
-    name: "Bob",
+    name: "Zoe",
     breed: "Maltese",
     age: "1 month",
     gender: "Female",
@@ -84,24 +62,17 @@ const dogs = [
   },
   {
     id: 10,
-    name: "BobBoel",
+    name: "Rocky",
     breed: "BobBoel",
     age: "2 years",
     gender: "Male",
     image: "/images/hero10.jpg",
     category: "adult",
   },
-  {
-    id: 11,
-    name: "Puppies",
-    breed: "BobBoel",
-    age: "1 month",
-    image: "/images/hero11.jpg",
-    category: "adult",
-  },
+  { id: 11, name: "Finn", breed: "BobBoel", age: "1 month", image: "/images/hero11.jpg", category: "adult" },
   {
     id: 12,
-    name: "Bob",
+    name: "Ruby",
     breed: "Small Munstar",
     age: "1 years",
     gender: "Male",
@@ -110,7 +81,7 @@ const dogs = [
   },
   {
     id: 13,
-    name: "Bob",
+    name: "Milo",
     breed: "BoarBoel cross cane corso",
     age: "1 years",
     gender: "Male",
@@ -128,7 +99,7 @@ const dogs = [
   },
   {
     id: 15,
-    name: "Bob",
+    name: "Riley",
     breed: "Golden Retriver",
     age: "1 years",
     gender: "Male/Female",
@@ -137,7 +108,7 @@ const dogs = [
   },
   {
     id: 16,
-    name: "Bob",
+    name: "Coco",
     breed: "Maltese",
     age: "2 months",
     gender: "Male",
@@ -146,7 +117,7 @@ const dogs = [
   },
   {
     id: 17,
-    name: "Bob",
+    name: "Sadie",
     breed: "Maltese",
     age: "1 month",
     gender: "Female",
@@ -155,7 +126,7 @@ const dogs = [
   },
   {
     id: 18,
-    name: "Bob",
+    name: "Nala",
     breed: "Maltese",
     age: "1 month",
     gender: "Females",
@@ -164,7 +135,7 @@ const dogs = [
   },
   {
     id: 19,
-    name: "Bob",
+    name: "Rex",
     breed: "German Shepherd Cross Golden Retriver",
     age: "7 months",
     gender: "Female",
@@ -173,7 +144,7 @@ const dogs = [
   },
   {
     id: 20,
-    name: "Bob",
+    name: "Buddy",
     breed: "German Shepherd",
     age: "1 month",
     gender: "Male",
@@ -182,31 +153,15 @@ const dogs = [
   },
   {
     id: 21,
-    name: "Bob",
+    name: "Simba",
     breed: "German Shepherd",
     age: "7 months",
     gender: "Male",
     image: "/images/hero21.jpg",
     category: "adult",
   },
-  {
-    id: 23,
-    name: "Bob",
-    breed: "BoarBoel",
-    age: "2 months",
-    gender: "Male",
-    image: "/images/hero23.jpg",
-    category: "adult",
-  },
-  {
-    id: 25,
-    name: "Puppies",
-    breed: "German Shepherd Puppies",
-    age: "2 months",
-    gender: "Male",
-    image: "/images/hero25.jpg",
-    category: "adult",
-  },
+  { id: 23, name: "Mocha", breed: "BoarBoel", age: "2 months", gender: "Male", image: "/images/hero23.jpg", category: "adult" },
+  { id: 25, name: "Hazel", breed: "German Shepherd Puppies", age: "2 months", gender: "Male", image: "/images/hero25.jpg", category: "adult" },
 ]
 
 export default function DogsPage() {
@@ -255,7 +210,7 @@ export default function DogsPage() {
         </TabsContent>
       </Tabs>
 
-      <div className="rounded-xl bg-amber-50 p-8">
+      <div className="rounded-xl bg-neutral-900 p-8" data-aos="fade-up">
         <h2 className="mb-4 text-center text-2xl font-semibold">Looking for a Specific Breed?</h2>
         <p className="mx-auto mb-6 max-w-2xl text-center text-muted-foreground">
           Don&apos;t see what you&apos;re looking for? Contact us with your preferences and we&apos;ll help you find the
@@ -273,7 +228,7 @@ export default function DogsPage() {
 
 function DogCard({ dog }: { dog: (typeof dogs)[0] }) {
   return (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
+    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg" data-aos="zoom-in">
       <div className="relative h-64 w-full">
         <Image
           src={dog.image || "/placeholder.svg"}
