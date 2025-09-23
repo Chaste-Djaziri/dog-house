@@ -10,14 +10,14 @@ const GalleryPage = () => {
   return (
     <div className="bg-cream">
       <SEO
-        title="Doghouse Rwanda Gallery | Happy Families & Facilities"
-        description="Explore adoption day highlights, behind-the-scenes nursery photos, and training moments from Doghouse Rwanda's community."
-        keywords="doghouse gallery, dog adoption photos, dog breeders Rwanda"
+        title="Dog HouseRwanda Gallery | Happy Families & Facilities"
+        description="Explore adoption day highlights, behind-the-scenes nursery photos, and training moments from Dog HouseRwanda's community."
+        keywords="Dog Housegallery, dog adoption photos, dog breeders Rwanda"
         url={`${SITE_URL}/gallery`}
       />
       <PageHero
         title="Gallery & Happy Families"
-        subtitle="Peek behind the scenes at Doghouse Rwanda. From our nursery to happy adoption days, every photo celebrates the bond between people and their pets."
+        subtitle="Peek behind the scenes at Dog HouseRwanda. From our nursery to happy adoption days, every photo celebrates the bond between people and their pets."
         backgroundImage="https://images.pexels.com/photos/7210614/pexels-photo-7210614.jpeg?auto=compress&cs=tinysrgb&w=1200"
       />
 
@@ -30,7 +30,7 @@ const GalleryPage = () => {
           </div>
           <div className="flex-1">
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-forest-green mb-4">
-              Share Your Doghouse Story
+              Share Your Dog HouseStory
             </h2>
             <p className="text-brown/80 mb-4">
               We love hearing from families after adoption day. Send us your favorite memories on Instagram or email, and we will feature them in our community highlights.

@@ -86,7 +86,7 @@ const SEO = ({
     setMetaTag('property', 'og:type', type);
     setMetaTag('property', 'og:url', canonicalUrl);
     setMetaTag('property', 'og:image', imageUrl);
-    setMetaTag('property', 'og:site_name', 'Doghouse Rwanda');
+    setMetaTag('property', 'og:site_name', 'Dog HouseRwanda');
 
     setMetaTag('name', 'twitter:card', 'summary_large_image');
     setMetaTag('name', 'twitter:title', title);

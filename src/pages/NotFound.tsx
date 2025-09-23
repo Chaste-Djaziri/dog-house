@@ -8,7 +8,7 @@ const NotFoundPage = () => {
   return (
     <div className="bg-cream min-h-[60vh] flex items-center">
       <SEO
-        title="Page Not Found | Doghouse Rwanda"
+        title="Page Not Found | Dog HouseRwanda"
         description="The page you are looking for might have been moved or no longer exists."
         url={`${SITE_URL}${location.pathname}`}
       />

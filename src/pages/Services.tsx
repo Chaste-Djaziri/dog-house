@@ -30,7 +30,7 @@ const ServicesPage = () => {
     <div className="bg-white">
       <SEO
         title="Dog Services in Rwanda | Breeding, Training & Grooming"
-        description="Explore Doghouse Rwanda services including ethical breeding, tailored training programs, grooming, and breeder consultations for every life stage."
+        description="Explore Dog HouseRwanda services including ethical breeding, tailored training programs, grooming, and breeder consultations for every life stage."
         keywords="dog services Rwanda, dog training Kigali, dog grooming Rwanda"
         url={`${SITE_URL}/services`}
       />

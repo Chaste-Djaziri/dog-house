@@ -30,7 +30,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-forest-green mb-4">
-            About Doghouse Rwanda
+            About Dog HouseRwanda
           </h2>
           <p className="text-lg text-brown max-w-3xl mx-auto">
             Founded with a passion for connecting loving families with healthy, happy dogs, 
@@ -51,7 +51,7 @@ const About = () => {
               Our Mission
             </h3>
             <p className="text-brown mb-6 leading-relaxed">
-              At Doghouse Rwanda, we believe every dog deserves a loving home and every family 
+              At Dog HouseRwanda, we believe every dog deserves a loving home and every family 
               deserves a loyal companion. Our mission is to breed healthy, well-socialized dogs 
               while maintaining the highest standards of care and ethics.
             </p>

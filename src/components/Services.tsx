@@ -108,7 +108,7 @@ const Services = () => {
         {/* Why Choose Us */}
         <div className="mt-20 bg-gradient-to-r from-forest-green to-light-green rounded-2xl p-8 md:p-12 text-white text-center">
           <h3 className="font-heading text-2xl md:text-3xl font-bold mb-4">
-            Why Choose Doghouse Rwanda?
+            Why Choose Dog HouseRwanda?
           </h3>
           <p className="text-lg mb-8 max-w-3xl mx-auto opacity-90">
             With years of experience and a genuine love for dogs, we provide exceptional 

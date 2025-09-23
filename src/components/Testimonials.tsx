@@ -10,7 +10,7 @@ const Testimonials = () => {
       name: 'Sarah Mugisha',
       location: 'Kigali, Rwanda',
       rating: 5,
-      text: 'We got our Golden Retriever from Doghouse Rwanda 6 months ago, and we couldn\'t be happier! The team was professional, caring, and provided excellent support throughout the process. Our puppy came healthy, vaccinated, and well-socialized.',
+      text: 'We got our Golden Retriever from Dog HouseRwanda 6 months ago, and we couldn\'t be happier! The team was professional, caring, and provided excellent support throughout the process. Our puppy came healthy, vaccinated, and well-socialized.',
       image: 'https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=400',
       dogName: 'Bella'
     },
@@ -26,7 +26,7 @@ const Testimonials = () => {
       name: 'Grace Uwimana',
       location: 'Musanze, Rwanda',
       rating: 5,
-      text: 'The breeding quality is exceptional. Our Labrador is healthy, intelligent, and has the sweetest temperament. The team at Doghouse Rwanda truly cares about their dogs and their new families.',
+      text: 'The breeding quality is exceptional. Our Labrador is healthy, intelligent, and has the sweetest temperament. The team at Dog HouseRwanda truly cares about their dogs and their new families.',
       image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400',
       dogName: 'Luna'
     },
@@ -64,7 +64,7 @@ const Testimonials = () => {
           </h2>
           <p className="text-lg text-brown max-w-2xl mx-auto">
             Don't just take our word for it. Here's what our customers say about 
-            their experience with Doghouse Rwanda.
+            their experience with Dog HouseRwanda.
           </p>
         </div>
 

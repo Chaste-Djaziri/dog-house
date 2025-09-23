@@ -15,8 +15,8 @@ const HomePage = () => {
   return (
     <>
       <SEO
-        title="Doghouse Rwanda | Trusted Dog Breeding & Dog Care"
-        description="Discover healthy, well-socialized puppies and lifelong support from Doghouse Rwanda. Ethical breeding, training, grooming, and pet care services in Kigali."
+        title="Dog HouseRwanda | Trusted Dog Breeding & Dog Care"
+        description="Discover healthy, well-socialized puppies and lifelong support from Dog HouseRwanda. Ethical breeding, training, grooming, and pet care services in Kigali."
         keywords="dog breeding Rwanda, puppies for sale Kigali, dog training Rwanda, pet care blog"
         url={SITE_URL}
       />

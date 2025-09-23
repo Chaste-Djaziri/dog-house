@@ -9,7 +9,7 @@ import SEO, { SITE_URL } from '../components/SEO';
 const milestones = [
   {
     year: '2016',
-    title: 'Doghouse Rwanda Opens',
+    title: 'Dog HouseRwanda Opens',
     description:
       'We began with a small team of passionate breeders focused on champion bloodlines and ethical practices.',
   },
@@ -61,13 +61,13 @@ const AboutPage = () => {
   return (
     <div className="bg-white">
       <SEO
-        title="Doghouse Rwanda | Ethical Breeders & Expert Care"
-        description="Meet the certified breeders, veterinarians, and trainers behind Doghouse Rwanda. Learn about our milestones, ethical standards, and lifelong support."
-        keywords="dog breeders Rwanda, ethical dog breeding, doghouse team"
+        title="Dog HouseRwanda | Ethical Breeders & Expert Care"
+        description="Meet the certified breeders, veterinarians, and trainers behind Dog HouseRwanda. Learn about our milestones, ethical standards, and lifelong support."
+        keywords="dog breeders Rwanda, ethical dog breeding, Dog Houseteam"
         url={`${SITE_URL}/about`}
       />
       <PageHero
-        title="About Doghouse Rwanda"
+        title="About Dog HouseRwanda"
         subtitle="A trusted team of breeders, trainers, and veterinarians dedicated to raising healthy, confident dogs for loving families across Rwanda."
         backgroundImage="https://images.pexels.com/photos/4588055/pexels-photo-4588055.jpeg?auto=compress&cs=tinysrgb&w=1200"
       />
@@ -81,7 +81,7 @@ const AboutPage = () => {
               Our Story & Milestones
             </h2>
             <p className="text-brown/80 mb-8">
-              From our first carefully planned litter to a thriving community of dog lovers, Doghouse Rwanda has grown alongside the families we support.
+              From our first carefully planned litter to a thriving community of dog lovers, Dog HouseRwanda has grown alongside the families we support.
             </p>
             <div className="space-y-6">
               {milestones.map((milestone) => (

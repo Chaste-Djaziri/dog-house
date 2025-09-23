@@ -15,14 +15,14 @@ const TestimonialsPage = () => {
   return (
     <div className="bg-white">
       <SEO
-        title="Doghouse Rwanda Reviews | Happy Families"
-        description="Read testimonials from families across Rwanda who adopted through Doghouse Rwanda and enjoy lifetime support from our team."
-        keywords="doghouse reviews, dog adoption stories, dog breeders testimonials"
+        title="Dog HouseRwanda Reviews | Happy Families"
+        description="Read testimonials from families across Rwanda who adopted through Dog HouseRwanda and enjoy lifetime support from our team."
+        keywords="Dog Housereviews, dog adoption stories, dog breeders testimonials"
         url={`${SITE_URL}/testimonials`}
       />
       <PageHero
         title="Testimonials & Success Stories"
-        subtitle="Real feedback from Rwandan families who welcomed a Doghouse companion into their homes."
+        subtitle="Real feedback from Rwandan families who welcomed a Dog Housecompanion into their homes."
         backgroundImage="https://images.pexels.com/photos/7469227/pexels-photo-7469227.jpeg?auto=compress&cs=tinysrgb&w=1200"
       />
 
@@ -52,7 +52,7 @@ const TestimonialsPage = () => {
             Ready to Share Your Experience?
           </h2>
           <p className="text-brown/80 mb-6 max-w-2xl mx-auto">
-            Send us a photo and testimonial after adoption day. Your story helps future families feel confident adopting from Doghouse Rwanda.
+            Send us a photo and testimonial after adoption day. Your story helps future families feel confident adopting from Dog HouseRwanda.
           </p>
           <a
             href="mailto:stories@doghouserw.com"

@@ -34,9 +34,9 @@ const BlogPage = () => {
     () => ({
       '@context': 'https://schema.org',
       '@type': 'Blog',
-      name: 'Doghouse Rwanda Pet Care Blog',
+      name: 'Dog HouseRwanda Pet Care Blog',
       description:
-        'Expert advice, training tips, and lifestyle inspiration from the Doghouse Rwanda team of breeders, vets, and trainers.',
+        'Expert advice, training tips, and lifestyle inspiration from the Dog HouseRwanda team of breeders, vets, and trainers.',
       url: `${SITE_URL}/blog`,
       blogPost: sortedPosts.slice(0, 5).map((post) => ({
         '@type': 'BlogPosting',
@@ -57,8 +57,8 @@ const BlogPage = () => {
   return (
     <div className="bg-cream">
       <SEO
-        title="Pet Care Blog | Doghouse Rwanda"
-        description="Read the latest pet care guides, training routines, breed insights, and wellness tips curated by the Doghouse Rwanda team."
+        title="Pet Care Blog | Dog HouseRwanda"
+        description="Read the latest pet care guides, training routines, breed insights, and wellness tips curated by the Dog HouseRwanda team."
         keywords="pet care blog, dog training tips, dog health Rwanda"
         url={`${SITE_URL}/blog`}
         jsonLd={blogJsonLd}
@@ -186,7 +186,7 @@ const BlogPage = () => {
                 Never Miss a Training Tip or Health Update
               </h3>
               <p className="text-brown/80 mb-6">
-                Join our community newsletter for curated pet care guidance, early access to available puppies, and upcoming events at Doghouse Rwanda.
+                Join our community newsletter for curated pet care guidance, early access to available puppies, and upcoming events at Dog HouseRwanda.
               </p>
               <ul className="space-y-3 text-brown/80">
                 <li>• Monthly vet-approved health insights tailored to Rwanda</li>
@@ -224,7 +224,7 @@ const BlogPage = () => {
                 Subscribe to Pet Care Updates
               </button>
               <p className="text-xs text-brown/60">
-                By subscribing you agree to receive occasional updates from Doghouse Rwanda. Unsubscribe anytime.
+                By subscribing you agree to receive occasional updates from Dog HouseRwanda. Unsubscribe anytime.
               </p>
             </form>
           </div>

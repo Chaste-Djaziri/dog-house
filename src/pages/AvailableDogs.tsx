@@ -25,14 +25,14 @@ const AvailableDogsPage = () => {
   return (
     <div className="bg-cream">
       <SEO
-        title="Available Puppies | Doghouse Rwanda"
-        description="Browse current and upcoming litters from Doghouse Rwanda. Every puppy is health-certified, socialized, and supported by our expert team."
+        title="Available Puppies | Dog HouseRwanda"
+        description="Browse current and upcoming litters from Dog HouseRwanda. Every puppy is health-certified, socialized, and supported by our expert team."
         keywords="puppies for sale Rwanda, adopt dog Kigali, available dogs"
         url={`${SITE_URL}/available-dogs`}
       />
       <PageHero
         title="Available Puppies"
-        subtitle="Browse carefully selected litters from ethical breeding lines. Every puppy receives comprehensive veterinary care, early socialization, and lifetime support from the Doghouse Rwanda family."
+        subtitle="Browse carefully selected litters from ethical breeding lines. Every puppy receives comprehensive veterinary care, early socialization, and lifetime support from the Dog HouseRwanda family."
         backgroundImage="https://images.pexels.com/photos/5732457/pexels-photo-5732457.jpeg?auto=compress&cs=tinysrgb&w=1200"
       >
         <a

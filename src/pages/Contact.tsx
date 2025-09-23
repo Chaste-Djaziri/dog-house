@@ -31,13 +31,13 @@ const ContactPage = () => {
   return (
     <div className="bg-white">
       <SEO
-        title="Contact Doghouse Rwanda | Book a Visit"
-        description="Call, WhatsApp, or email Doghouse Rwanda to discuss available puppies, training services, or schedule a kennel tour in Kigali."
-        keywords="contact dog breeders Rwanda, doghouse contact, book dog visit"
+        title="Contact Dog HouseRwanda | Book a Visit"
+        description="Call, WhatsApp, or email Dog HouseRwanda to discuss available puppies, training services, or schedule a kennel tour in Kigali."
+        keywords="contact dog breeders Rwanda, Dog Housecontact, book dog visit"
         url={`${SITE_URL}/contact`}
       />
       <PageHero
-        title="Contact Doghouse Rwanda"
+        title="Contact Dog HouseRwanda"
         subtitle="We’re here to guide you through adoption, training, and lifelong care. Reach out through your preferred channel and our team will respond promptly."
         backgroundImage="https://images.pexels.com/photos/7210538/pexels-photo-7210538.jpeg?auto=compress&cs=tinysrgb&w=1200"
       />

@@ -14,8 +14,8 @@ const BlogPostPage = () => {
     return (
       <div className="bg-cream min-h-[60vh] flex flex-col items-center justify-center text-center px-4">
         <SEO
-          title="Article Not Found | Doghouse Rwanda"
-          description="The blog article you requested could not be found. Explore the latest pet care tips and guides from Doghouse Rwanda instead."
+          title="Article Not Found | Dog HouseRwanda"
+          description="The blog article you requested could not be found. Explore the latest pet care tips and guides from Dog HouseRwanda instead."
           keywords="dog blog Rwanda, pet care tips"
           url={`${SITE_URL}/blog`}
         />
@@ -55,7 +55,7 @@ const BlogPostPage = () => {
   return (
     <div className="bg-cream">
       <SEO
-        title={`${post.title} | Doghouse Rwanda Blog`}
+        title={`${post.title} | Dog HouseRwanda Blog`}
         description={post.excerpt}
         keywords={post.tags.join(', ')}
         image={post.image}

@@ -67,7 +67,7 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-gold to-light-gold rounded-3xl opacity-20 blur-lg"></div>
               <img
                 src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Beautiful dog from Doghouse Rwanda"
+                alt="Beautiful dog from Dog HouseRwanda"
                 className="relative w-full h-[500px] object-cover rounded-3xl shadow-2xl"
               />
               

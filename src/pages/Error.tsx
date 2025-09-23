@@ -14,7 +14,7 @@ const ErrorPage: React.FC<ErrorPageProps> = ({ error, onRetry }) => {
   return (
     <div className="bg-cream min-h-[60vh] flex items-center">
       <SEO
-        title="Something Went Wrong | Doghouse Rwanda"
+        title="Something Went Wrong | Dog HouseRwanda"
         description="We hit a snag while loading this page. Please try again or return to the homepage."
         url={`${SITE_URL}${location.pathname}`}
       />
