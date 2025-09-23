@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Mail, Phone, MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Heart, Mail, Phone, MapPin, Instagram, Facebook, Twitter, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const quickLinks = [
@@ -164,6 +164,40 @@ const Footer = () => {
               </a>
               <a href="#" className="text-gray-300 hover:text-gold transition-colors">
                 Health Guarantee
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-6 text-sm text-gray-400 flex flex-col md:flex-row md:items-center md:justify-between space-y-2 md:space-y-0">
+            <div className="flex items-center justify-center space-x-2">
+              <span>Made by</span>
+              <a
+                href="https://micorp.pro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold hover:text-light-gold font-semibold"
+              >
+                Mirror Corporation
+              </a>
+            </div>
+            <div className="flex items-center justify-center space-x-4">
+              <a
+                href="https://www.instagram.com/mirror_corporation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-1 hover:text-gold transition-colors"
+              >
+                <Instagram className="w-4 h-4" />
+                <span>@mirror_corporation</span>
+              </a>
+              <a
+                href="https://github.com/Mi-corp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-1 hover:text-gold transition-colors"
+              >
+                <Github className="w-4 h-4" />
+                <span>Mi-corp</span>
               </a>
             </div>
           </div>
