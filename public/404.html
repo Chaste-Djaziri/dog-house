@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doghouse Rwanda | Redirecting...</title>
+    <script>
+      (function () {
+        try {
+          var redirectPath = window.location.pathname + window.location.search + window.location.hash;
+          window.sessionStorage.setItem('doghouse:redirect-path', redirectPath);
+        } catch (error) {
+          console.warn('Unable to store redirect path', error);
+        }
+        window.location.replace('/');
+      })();
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/" />
+    </noscript>
+  </head>
+  <body>
+    <p>Redirecting... If you are not redirected automatically, <a href="/">return to the homepage</a>.</p>
+  </body>
+</html>

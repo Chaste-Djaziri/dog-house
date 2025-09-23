@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import SiteLayout from './layouts/SiteLayout';
 import HomePage from './pages/Home';
 import AboutPage from './pages/About';
@@ -11,6 +11,7 @@ import BlogIndexPage from './pages/Blog';
 import BlogPostPage from './pages/BlogPost';
 import ContactPage from './pages/Contact';
 import FAQPage from './pages/FAQ';
+import NotFoundPage from './pages/NotFound';
 
 const App = () => {
   return (
@@ -26,8 +27,8 @@ const App = () => {
         <Route path="blog/:slug" element={<BlogPostPage />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="faq" element={<FAQPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
-      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };
