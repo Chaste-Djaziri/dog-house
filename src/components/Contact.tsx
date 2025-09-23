@@ -100,7 +100,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-beige rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-colors"
-                      placeholder="+250 xxx xxx xxx"
+                      placeholder="+250 787 272 038"
                     />
                   </div>
                 </div>
@@ -198,7 +198,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-forest-green mb-1">Phone</h4>
-                    <p className="text-brown">+250 xxx xxx xxx</p>
+                    <p className="text-brown">+250 787 272 038</p>
                     <p className="text-sm text-brown opacity-80">Available 8 AM - 6 PM, Monday - Saturday</p>
                   </div>
                 </div>
@@ -252,7 +252,7 @@ const Contact = () => {
                   Get instant responses to your questions
                 </p>
                 <a
-                  href="https://wa.me/250123456789?text=Hi! I'm interested in your dogs."
+                  href="https://wa.me/250787272038?text=Hi! I'm interested in your dogs."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white text-green-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition-colors inline-flex items-center"

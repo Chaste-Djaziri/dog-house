@@ -36,7 +36,7 @@ const AvailableDogsPage = () => {
         backgroundImage="https://images.pexels.com/photos/5732457/pexels-photo-5732457.jpeg?auto=compress&cs=tinysrgb&w=1200"
       >
         <a
-          href="https://wa.me/250123456789"
+          href="https://wa.me/250787272038"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center bg-gold hover:bg-light-gold text-white font-semibold px-6 py-3 rounded-full transition-colors"
