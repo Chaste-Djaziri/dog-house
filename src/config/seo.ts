@@ -17,7 +17,7 @@ export const BUSINESS_SOCIAL_PROFILES = [
 ];
 export const DEFAULT_ROBOTS = 'index, follow';
 export const DEFAULT_KEYWORDS = [
-  'Dog HouseRwanda',
+  'Dog House Rwanda',
   'dog breeders Rwanda',
   'puppies for sale Kigali',
   'ethical dog breeding',
