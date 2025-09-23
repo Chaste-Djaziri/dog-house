@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export const SITE_URL = 'https://doghouse-rwanda.com';
+export const SITE_URL = 'https://doghouse.micorp.pro';
 export const DEFAULT_SHARE_IMAGE = '/hero1.jpg';
 
 type Keywords = string | string[];

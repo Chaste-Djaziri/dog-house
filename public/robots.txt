@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://doghouse-rwanda.com/sitemap.xml
+Sitemap: https://doghouse.micorp.pro/sitemap.xml
