@@ -4,7 +4,9 @@ import GallerySection from '../components/Gallery';
 import PawDivider from '../components/PawDivider';
 import Testimonials from '../components/Testimonials';
 import PageHero from '../components/PageHero';
-import SEO, { SITE_URL } from '../components/SEO';
+import SEO from '../components/SEO';
+import { SITE_URL } from '../config/seo';
+import { buildGenericBreadcrumbs } from '../utils/seo';
 
 const GalleryPage = () => {
   return (
@@ -12,8 +14,9 @@ const GalleryPage = () => {
       <SEO
         title="Dog HouseRwanda Gallery | Happy Families & Facilities"
         description="Explore adoption day highlights, behind-the-scenes nursery photos, and training moments from Dog HouseRwanda's community."
-        keywords="Dog Housegallery, dog adoption photos, dog breeders Rwanda"
+        keywords="Dog HouseRwanda gallery, dog adoption photos, dog breeders Rwanda"
         url={`${SITE_URL}/gallery`}
+        jsonLd={buildGenericBreadcrumbs('Gallery', '/gallery')}
       />
       <PageHero
         title="Gallery & Happy Families"

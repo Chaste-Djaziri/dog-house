@@ -4,7 +4,9 @@ import PawDivider from '../components/PawDivider';
 import ServicesOverview from '../components/Services';
 import FAQ from '../components/FAQ';
 import PageHero from '../components/PageHero';
-import SEO, { SITE_URL } from '../components/SEO';
+import SEO from '../components/SEO';
+import { SITE_URL } from '../config/seo';
+import { buildGenericBreadcrumbs } from '../utils/seo';
 
 const milestones = [
   {
@@ -65,6 +67,7 @@ const AboutPage = () => {
         description="Meet the certified breeders, veterinarians, and trainers behind Dog HouseRwanda. Learn about our milestones, ethical standards, and lifelong support."
         keywords="dog breeders Rwanda, ethical dog breeding, Dog Houseteam"
         url={`${SITE_URL}/about`}
+        jsonLd={buildGenericBreadcrumbs('About', '/about')}
       />
       <PageHero
         title="About Dog HouseRwanda"

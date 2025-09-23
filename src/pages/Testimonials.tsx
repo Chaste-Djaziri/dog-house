@@ -3,7 +3,10 @@ import TestimonialsSection from '../components/Testimonials';
 import PawDivider from '../components/PawDivider';
 import Contact from '../components/Contact';
 import PageHero from '../components/PageHero';
-import SEO, { SITE_URL } from '../components/SEO';
+import SEO from '../components/SEO';
+import { SITE_URL } from '../config/seo';
+import { buildGenericBreadcrumbs, buildTestimonialSchema } from '../utils/seo';
+import { TESTIMONIALS_DATA } from '../data/testimonials';
 
 const stats = [
   { label: 'Families matched', value: '50+' },
@@ -17,8 +20,17 @@ const TestimonialsPage = () => {
       <SEO
         title="Dog HouseRwanda Reviews | Happy Families"
         description="Read testimonials from families across Rwanda who adopted through Dog HouseRwanda and enjoy lifetime support from our team."
-        keywords="Dog Housereviews, dog adoption stories, dog breeders testimonials"
+        keywords="Dog HouseRwanda reviews, dog adoption stories, dog breeder testimonials"
         url={`${SITE_URL}/testimonials`}
+        jsonLd={[
+          buildTestimonialSchema(
+            TESTIMONIALS_DATA.map((testimonial) => ({
+              author: testimonial.name,
+              quote: testimonial.text,
+            }))
+          ),
+          buildGenericBreadcrumbs('Testimonials', '/testimonials'),
+        ]}
       />
       <PageHero
         title="Testimonials & Success Stories"

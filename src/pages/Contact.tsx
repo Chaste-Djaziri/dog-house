@@ -4,13 +4,15 @@ import ContactSection from '../components/Contact';
 import PawDivider from '../components/PawDivider';
 import FAQ from '../components/FAQ';
 import PageHero from '../components/PageHero';
-import SEO, { SITE_URL } from '../components/SEO';
+import SEO from '../components/SEO';
+import { SITE_URL } from '../config/seo';
+import { buildContactPageSchema, buildGenericBreadcrumbs } from '../utils/seo';
 
 const contactChannels = [
   {
     icon: Phone,
     label: 'Call or WhatsApp',
-    value: '+250 123 456 789',
+    value: '+250 787 272 038',
     description: 'Reach us Monday–Saturday, 8 AM to 6 PM. We love quick check-ins and urgent questions.',
   },
   {
@@ -33,8 +35,15 @@ const ContactPage = () => {
       <SEO
         title="Contact Dog HouseRwanda | Book a Visit"
         description="Call, WhatsApp, or email Dog HouseRwanda to discuss available puppies, training services, or schedule a kennel tour in Kigali."
-        keywords="contact dog breeders Rwanda, Dog Housecontact, book dog visit"
+        keywords="contact dog breeders Rwanda, Dog HouseRwanda contact, book dog visit"
         url={`${SITE_URL}/contact`}
+        jsonLd={[
+          buildContactPageSchema({
+            description:
+              'Call, WhatsApp, or email Dog HouseRwanda to discuss available puppies, training services, or schedule a kennel tour in Kigali.',
+          }),
+          buildGenericBreadcrumbs('Contact', '/contact'),
+        ]}
       />
       <PageHero
         title="Contact Dog HouseRwanda"

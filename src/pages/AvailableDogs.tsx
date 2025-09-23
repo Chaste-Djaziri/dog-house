@@ -4,7 +4,9 @@ import FeaturedDogs from '../components/FeaturedDogs';
 import PawDivider from '../components/PawDivider';
 import Contact from '../components/Contact';
 import PageHero from '../components/PageHero';
-import SEO, { SITE_URL } from '../components/SEO';
+import SEO from '../components/SEO';
+import { SITE_URL } from '../config/seo';
+import { buildAvailableDogsSchema, buildGenericBreadcrumbs } from '../utils/seo';
 
 const adoptionSteps = [
   {
@@ -29,6 +31,10 @@ const AvailableDogsPage = () => {
         description="Browse current and upcoming litters from Dog HouseRwanda. Every puppy is health-certified, socialized, and supported by our expert team."
         keywords="puppies for sale Rwanda, adopt dog Kigali, available dogs"
         url={`${SITE_URL}/available-dogs`}
+        jsonLd={[
+          buildAvailableDogsSchema(),
+          buildGenericBreadcrumbs('Available Puppies', '/available-dogs'),
+        ]}
       />
       <PageHero
         title="Available Puppies"

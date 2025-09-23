@@ -2,7 +2,9 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowLeft, Tag } from 'lucide-react';
 import PageHero from '../components/PageHero';
-import SEO, { SITE_URL } from '../components/SEO';
+import SEO from '../components/SEO';
+import { SITE_URL } from '../config/seo';
+import { buildBlogBreadcrumbs } from '../utils/seo';
 import { getPostBySlug, getRecentPosts } from '../data/blogPosts';
 
 const BlogPostPage = () => {
@@ -61,7 +63,7 @@ const BlogPostPage = () => {
         image={post.image}
         url={articleUrl}
         type="article"
-        jsonLd={articleJsonLd}
+        jsonLd={[articleJsonLd, buildBlogBreadcrumbs(post.slug, post.title)]}
       />
       <PageHero
         title={post.title}

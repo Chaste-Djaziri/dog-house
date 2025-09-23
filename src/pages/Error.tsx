@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import SEO, { SITE_URL } from '../components/SEO';
+import SEO from '../components/SEO';
+import { SITE_URL } from '../config/seo';
 
 interface ErrorPageProps {
   error?: Error;
@@ -17,6 +18,7 @@ const ErrorPage: React.FC<ErrorPageProps> = ({ error, onRetry }) => {
         title="Something Went Wrong | Dog HouseRwanda"
         description="We hit a snag while loading this page. Please try again or return to the homepage."
         url={`${SITE_URL}${location.pathname}`}
+        robots="noindex, nofollow"
       />
       <div className="container mx-auto px-4 py-20">
         <div className="bg-white rounded-3xl shadow-xl border border-cream max-w-3xl mx-auto p-10 text-center">

@@ -2,7 +2,9 @@ import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, Tag } from 'lucide-react';
 import PageHero from '../components/PageHero';
-import SEO, { SITE_URL } from '../components/SEO';
+import SEO from '../components/SEO';
+import { SITE_URL } from '../config/seo';
+import { buildGenericBreadcrumbs } from '../utils/seo';
 import { blogPosts } from '../data/blogPosts';
 
 const BlogPage = () => {
@@ -61,7 +63,7 @@ const BlogPage = () => {
         description="Read the latest pet care guides, training routines, breed insights, and wellness tips curated by the Dog HouseRwanda team."
         keywords="pet care blog, dog training tips, dog health Rwanda"
         url={`${SITE_URL}/blog`}
-        jsonLd={blogJsonLd}
+        jsonLd={[blogJsonLd, buildGenericBreadcrumbs('Blog', '/blog')]}
       />
       <PageHero
         title="Pet Care Blog"

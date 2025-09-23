@@ -1,58 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { TESTIMONIALS_DATA } from '../data/testimonials';
 
 const Testimonials = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  const testimonials = [
-    {
-      name: 'Sarah Mugisha',
-      location: 'Kigali, Rwanda',
-      rating: 5,
-      text: 'We got our Golden Retriever from Dog HouseRwanda 6 months ago, and we couldn\'t be happier! The team was professional, caring, and provided excellent support throughout the process. Our puppy came healthy, vaccinated, and well-socialized.',
-      image: 'https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=400',
-      dogName: 'Bella'
-    },
-    {
-      name: 'Jean Baptiste',
-      location: 'Huye, Rwanda',
-      rating: 5,
-      text: 'Outstanding service! The German Shepherd we adopted has been an amazing addition to our family. The health guarantee and ongoing support made us feel confident in our choice. Highly recommended!',
-      image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=400',
-      dogName: 'Max'
-    },
-    {
-      name: 'Grace Uwimana',
-      location: 'Musanze, Rwanda',
-      rating: 5,
-      text: 'The breeding quality is exceptional. Our Labrador is healthy, intelligent, and has the sweetest temperament. The team at Dog HouseRwanda truly cares about their dogs and their new families.',
-      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400',
-      dogName: 'Luna'
-    },
-    {
-      name: 'David Nkurunziza',
-      location: 'Rubavu, Rwanda',
-      rating: 5,
-      text: 'Professional, trustworthy, and genuinely caring. We\'ve bought two dogs from them and both experiences were excellent. Their after-sale support and training advice have been invaluable.',
-      image: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=400',
-      dogName: 'Rex & Lucky'
-    }
-  ];
-
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+      setCurrentTestimonial((prev) => (prev + 1) % TESTIMONIALS_DATA.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [testimonials.length]);
+  }, []);
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    setCurrentTestimonial((prev) => (prev + 1) % TESTIMONIALS_DATA.length);
   };
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentTestimonial((prev) => (prev - 1 + TESTIMONIALS_DATA.length) % TESTIMONIALS_DATA.length);
   };
 
   return (
@@ -79,30 +45,30 @@ const Testimonials = () => {
             <div className="relative z-10">
               <div className="text-center mb-8">
                 <div className="flex items-center justify-center mb-4">
-                  {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                  {[...Array(TESTIMONIALS_DATA[currentTestimonial].rating)].map((_, i) => (
                     <Star key={i} className="w-6 h-6 text-gold fill-current" />
                   ))}
                 </div>
                 
                 <blockquote className="text-lg md:text-xl text-brown italic leading-relaxed mb-6">
-                  "{testimonials[currentTestimonial].text}"
+                  "{TESTIMONIALS_DATA[currentTestimonial].text}"
                 </blockquote>
                 
                 <div className="flex items-center justify-center space-x-4">
                   <img
-                    src={testimonials[currentTestimonial].image}
-                    alt={testimonials[currentTestimonial].name}
+                    src={TESTIMONIALS_DATA[currentTestimonial].image}
+                    alt={TESTIMONIALS_DATA[currentTestimonial].name}
                     className="w-16 h-16 rounded-full object-cover border-4 border-gold"
                   />
                   <div className="text-left">
                     <div className="font-heading font-bold text-forest-green">
-                      {testimonials[currentTestimonial].name}
+                      {TESTIMONIALS_DATA[currentTestimonial].name}
                     </div>
                     <div className="text-brown">
-                      {testimonials[currentTestimonial].location}
+                      {TESTIMONIALS_DATA[currentTestimonial].location}
                     </div>
                     <div className="text-gold text-sm font-medium">
-                      Dog: {testimonials[currentTestimonial].dogName}
+                      Dog: {TESTIMONIALS_DATA[currentTestimonial].dogName}
                     </div>
                   </div>
                 </div>
@@ -128,7 +94,7 @@ const Testimonials = () => {
 
         {/* Testimonial Dots */}
         <div className="flex justify-center space-x-2 mt-8">
-          {testimonials.map((_, index) => (
+          {TESTIMONIALS_DATA.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentTestimonial(index)}
@@ -143,11 +109,13 @@ const Testimonials = () => {
 
         {/* Additional Testimonials Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
-          {testimonials.filter((_, index) => index !== currentTestimonial).slice(0, 3).map((testimonial, index) => (
+          {TESTIMONIALS_DATA.filter((_, index) => index !== currentTestimonial)
+            .slice(0, 3)
+            .map((testimonial, index) => (
             <div
               key={testimonial.name}
               className="bg-cream p-6 rounded-xl hover:shadow-lg transition-all duration-300 animate-fade-up"
-              style={{animationDelay: `${index * 0.1}s`}}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (

@@ -1,7 +1,12 @@
 import { useEffect } from 'react';
-
-export const SITE_URL = 'https://doghouse.micorp.pro';
-export const DEFAULT_SHARE_IMAGE = '/hero1.jpg';
+import {
+  BRAND_NAME,
+  BRAND_TWITTER_HANDLE,
+  DEFAULT_KEYWORDS,
+  DEFAULT_ROBOTS,
+  DEFAULT_SHARE_IMAGE,
+  SITE_URL,
+} from '../config/seo';
 
 type Keywords = string | string[];
 
@@ -15,6 +20,7 @@ interface SEOProps {
   url?: string;
   type?: string;
   jsonLd?: JsonLd;
+  robots?: string;
 }
 
 const ensureMetaTag = (attribute: 'name' | 'property', value: string) => {
@@ -42,9 +48,29 @@ const setCanonicalLink = (href: string) => {
   link.setAttribute('href', href);
 };
 
+const parseKeywords = (keywords: Keywords) => {
+  if (Array.isArray(keywords)) {
+    return keywords;
+  }
+  return keywords
+    .split(',')
+    .map((keyword) => keyword.trim())
+    .filter(Boolean);
+};
+
 const normaliseKeywords = (keywords?: Keywords) => {
-  if (!keywords) return undefined;
-  return Array.isArray(keywords) ? keywords.join(', ') : keywords;
+  const supplied = keywords ? parseKeywords(keywords) : [];
+  const seen = new Set<string>();
+  const merged = [...DEFAULT_KEYWORDS, ...supplied].filter((keyword) => {
+    const trimmed = keyword.trim();
+    if (!trimmed) return false;
+    const normalised = trimmed.toLowerCase();
+    if (seen.has(normalised)) return false;
+    seen.add(normalised);
+    return true;
+  });
+
+  return merged.length > 0 ? merged.join(', ') : undefined;
 };
 
 const resolveUrl = (pathOrUrl?: string) => {
@@ -63,6 +89,7 @@ const SEO = ({
   url,
   type = 'website',
   jsonLd,
+  robots = DEFAULT_ROBOTS,
 }: SEOProps) => {
   useEffect(() => {
     if (typeof document === 'undefined') return;
@@ -76,6 +103,11 @@ const SEO = ({
       setMetaTag('name', 'keywords', keywordContent);
     }
 
+    setMetaTag('name', 'author', BRAND_NAME);
+    setMetaTag('name', 'robots', robots);
+    setMetaTag('name', 'application-name', BRAND_NAME);
+    setMetaTag('name', 'apple-mobile-web-app-title', BRAND_NAME);
+
     const canonicalUrl = resolveUrl(url) ?? `${SITE_URL}${window.location.pathname}`;
     setCanonicalLink(canonicalUrl);
 
@@ -86,14 +118,19 @@ const SEO = ({
     setMetaTag('property', 'og:type', type);
     setMetaTag('property', 'og:url', canonicalUrl);
     setMetaTag('property', 'og:image', imageUrl);
-    setMetaTag('property', 'og:site_name', 'Dog HouseRwanda');
+    setMetaTag('property', 'og:image:secure_url', imageUrl);
+    setMetaTag('property', 'og:image:alt', title);
+    setMetaTag('property', 'og:site_name', BRAND_NAME);
+    setMetaTag('property', 'og:locale', 'en_RW');
 
     setMetaTag('name', 'twitter:card', 'summary_large_image');
     setMetaTag('name', 'twitter:title', title);
     setMetaTag('name', 'twitter:description', description);
     setMetaTag('name', 'twitter:image', imageUrl);
-    setMetaTag('name', 'twitter:site', '@doghouse_rw');
-  }, [title, description, keywords, image, url, type]);
+    setMetaTag('name', 'twitter:image:alt', title);
+    setMetaTag('name', 'twitter:site', BRAND_TWITTER_HANDLE);
+    setMetaTag('name', 'twitter:creator', BRAND_TWITTER_HANDLE);
+  }, [title, description, keywords, image, url, type, robots]);
 
   useEffect(() => {
     if (typeof document === 'undefined') return;
@@ -119,4 +156,5 @@ const SEO = ({
   return null;
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default SEO;

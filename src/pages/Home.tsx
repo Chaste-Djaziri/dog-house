@@ -9,7 +9,13 @@ import Testimonials from '../components/Testimonials';
 import BlogPreview from '../components/Blog';
 import Contact from '../components/Contact';
 import FAQ from '../components/FAQ';
-import SEO, { SITE_URL } from '../components/SEO';
+import SEO from '../components/SEO';
+import { SITE_URL } from '../config/seo';
+import {
+  buildLocalBusinessSchema,
+  buildOrganizationSchema,
+  buildWebsiteSchema,
+} from '../utils/seo';
 
 const HomePage = () => {
   return (
@@ -19,6 +25,11 @@ const HomePage = () => {
         description="Discover healthy, well-socialized puppies and lifelong support from Dog HouseRwanda. Ethical breeding, training, grooming, and pet care services in Kigali."
         keywords="dog breeding Rwanda, puppies for sale Kigali, dog training Rwanda, pet care blog"
         url={SITE_URL}
+        jsonLd={[
+          buildOrganizationSchema(),
+          buildLocalBusinessSchema(),
+          buildWebsiteSchema(),
+        ]}
       />
       <Hero />
       <PawDivider />

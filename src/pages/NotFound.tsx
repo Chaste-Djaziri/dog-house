@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import SEO, { SITE_URL } from '../components/SEO';
+import SEO from '../components/SEO';
+import { SITE_URL } from '../config/seo';
 
 const NotFoundPage = () => {
   const location = useLocation();
@@ -11,6 +12,7 @@ const NotFoundPage = () => {
         title="Page Not Found | Dog HouseRwanda"
         description="The page you are looking for might have been moved or no longer exists."
         url={`${SITE_URL}${location.pathname}`}
+        robots="noindex, nofollow"
       />
       <div className="container mx-auto px-4 py-20">
         <div className="bg-white rounded-3xl shadow-xl border border-cream max-w-3xl mx-auto p-10 text-center">

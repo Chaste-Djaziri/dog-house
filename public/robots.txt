@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+User-agent: AdsBot-Google
+Allow: /
+
 Sitemap: https://doghouse.micorp.pro/sitemap.xml
+Host: doghouse.micorp.pro

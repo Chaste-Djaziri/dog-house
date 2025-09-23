@@ -2,7 +2,10 @@ import React from 'react';
 import FAQSection from '../components/FAQ';
 import Contact from '../components/Contact';
 import PageHero from '../components/PageHero';
-import SEO, { SITE_URL } from '../components/SEO';
+import SEO from '../components/SEO';
+import { SITE_URL } from '../config/seo';
+import { buildFaqSchema, buildGenericBreadcrumbs } from '../utils/seo';
+import { FAQ_ITEMS } from '../data/faq';
 
 const FAQPage = () => {
   return (
@@ -10,8 +13,12 @@ const FAQPage = () => {
       <SEO
         title="Dog HouseRwanda FAQ | Adoption & Care"
         description="Get answers about Dog HouseRwanda's adoption process, health guarantees, training services, and post-adoption support."
-        keywords="dog adoption questions Rwanda, Dog Housefaq, dog breeder support"
+        keywords="dog adoption questions Rwanda, Dog HouseRwanda FAQ, dog breeder support"
         url={`${SITE_URL}/faq`}
+        jsonLd={[
+          buildFaqSchema(FAQ_ITEMS),
+          buildGenericBreadcrumbs('FAQ', '/faq'),
+        ]}
       />
       <PageHero
         title="Frequently Asked Questions"

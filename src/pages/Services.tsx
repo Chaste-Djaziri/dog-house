@@ -5,7 +5,9 @@ import PawDivider from '../components/PawDivider';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import PageHero from '../components/PageHero';
-import SEO, { SITE_URL } from '../components/SEO';
+import SEO from '../components/SEO';
+import { SITE_URL } from '../config/seo';
+import { buildGenericBreadcrumbs, buildServiceSchemas } from '../utils/seo';
 
 const servicePackages = [
   {
@@ -33,6 +35,16 @@ const ServicesPage = () => {
         description="Explore Dog HouseRwanda services including ethical breeding, tailored training programs, grooming, and breeder consultations for every life stage."
         keywords="dog services Rwanda, dog training Kigali, dog grooming Rwanda"
         url={`${SITE_URL}/services`}
+        jsonLd={[
+          ...buildServiceSchemas(
+            servicePackages.map((pkg) => ({
+              name: pkg.name,
+              description: pkg.description,
+              url: `${SITE_URL}/services`,
+            }))
+          ),
+          buildGenericBreadcrumbs('Services', '/services'),
+        ]}
       />
       <PageHero
         title="Services That Support Every Stage"
